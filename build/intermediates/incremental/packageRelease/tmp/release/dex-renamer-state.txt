@@ -1,0 +1,7 @@
+#Wed Sep 24 17:20:44 WAT 2025
+base.0=/Users/james/dev/NearScheduleWidget/app/build/intermediates/dex/release/mergeDexRelease/classes.dex
+base.1=/Users/james/dev/NearScheduleWidget/app/build/intermediates/dex/release/mergeDexRelease/classes2.dex
+path.0=classes.dex
+path.1=classes2.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex

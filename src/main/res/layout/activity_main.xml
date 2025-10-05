@@ -1,0 +1,249 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Section 1: Core Value Proposition -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="聚焦当下，着眼未来"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="一个让你保持专注、减少焦虑的桌面日程小部件"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            android:textColor="?android:attr/textColorSecondary"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@android:drawable/ic_menu_my_calendar"
+                    app:tint="?attr/colorPrimary"
+                    android:contentDescription="只看眼前事"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="只看眼前事"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="隐藏杂乱日程，只显示未来数小时安排，减少信息过载。"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:textColor="?android:attr/textColorSecondary"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@android:drawable/ic_menu_agenda"
+                    app:tint="?attr/colorPrimary"
+                    android:contentDescription="安然入睡"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="安然入睡"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="入夜后自动展示明日安排，让你安心入睡，从容迎接新一天。"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:textColor="?android:attr/textColorSecondary"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Section 2: Live Preview -->
+        <TextView
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="实时预览" />
+
+        <FrameLayout
+            android:id="@+id/widget_preview_container"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/darker_gray" >
+            <!-- The widget preview will be rendered here -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="小部件预览"
+                android:layout_gravity="center"
+                android:textColor="@android:color/white"/>
+        </FrameLayout>
+
+
+        <!-- Section 3: Core Feature Customization -->
+        <TextView
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="核心设置" />
+
+        <!-- Calendar Visibility -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="显示的日历"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold"/>
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/calendar_chip_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:singleLine="false">
+            <!-- Chips will be added programmatically -->
+        </com.google.android.material.chip.ChipGroup>
+
+        <!-- Time Window -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="时间窗口范围"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold"/>
+        <RadioGroup
+            android:id="@+id/time_window_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/time_window_12h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12小时"/>
+            <RadioButton
+                android:id="@+id/time_window_24h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="24小时"
+                android:checked="true"/>
+            <RadioButton
+                android:id="@+id/time_window_48h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="48小时"/>
+        </RadioGroup>
+
+        <!-- Evening Look-Ahead -->
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/evening_look_ahead_switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="入夜后显示明日安排"
+            android:checked="true"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Appearance -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="外观"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold"/>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/theme_switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="跟随系统主题"
+            android:checked="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="背景透明度"
+            android:layout_marginTop="8dp"/>
+        <com.google.android.material.slider.Slider
+            android:id="@+id/transparency_slider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:valueFrom="0"
+            android:valueTo="100"
+            android:stepSize="10"
+            android:value="20"/>
+
+        <!-- Permission Section (conditionally visible) -->
+        <LinearLayout
+            android:id="@+id/permission_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="24dp"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/tvPermissionStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="需要日历权限"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvPermissionInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="应用需要获取您的日历读取权限，才能将日程显示在小部件上。"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:textColor="?android:attr/textColorSecondary"
+                android:paddingHorizontal="32dp"/>
+
+            <Button
+                android:id="@+id/btnGrant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="授予权限"
+                android:layout_marginTop="24dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

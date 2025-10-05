@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="widget_allday_background">#064E3B</color>
+    <color name="widget_allday_text">#A7F3D0</color>
+    <color name="widget_background">#1F2937</color>
+    <color name="widget_event_background">#1E3A8A</color>
+    <color name="widget_event_bar">#60A5FA</color>
+    <color name="widget_event_stripes">#4B5563</color>
+    <color name="widget_event_time">#93C5FD</color>
+    <color name="widget_event_title">#BFDBFE</color>
+    <color name="widget_grid_line">#4B5563</color>
+    <color name="widget_now_line">#F87171</color>
+    <color name="widget_separator">#4B5563</color>
+    <color name="widget_text_primary">#F9FAFB</color>
+    <color name="widget_text_secondary">#9CA3AF</color>
+    <color name="widget_text_special">#F87171</color>
+    <color name="widget_text_tertiary">#D1D5DB</color>
+</resources>

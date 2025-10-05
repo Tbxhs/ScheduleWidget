@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="widget_allday_background">#D1FAE5</color>
+    <color name="widget_allday_text">#065F46</color>
+    <color name="widget_background">#F9FAFB</color>
+    <color name="widget_event_background">#DBEAFE</color>
+    <color name="widget_event_bar">#2563EB</color>
+    <color name="widget_event_stripes">#FFFFFF</color>
+    <color name="widget_event_time">#1E40AF</color>
+    <color name="widget_event_title">#1E3A8A</color>
+    <color name="widget_grid_line">#E5E7EB</color>
+    <color name="widget_now_line">#EF4444</color>
+    <color name="widget_separator">#E5E7EB</color>
+    <color name="widget_text_primary">#111827</color>
+    <color name="widget_text_secondary">#6B7280</color>
+    <color name="widget_text_special">#F87171</color>
+    <color name="widget_text_tertiary">#4B5563</color>
+    <string name="app_name">Near Schedule Widget</string>
+    <string name="force_update">手动刷新小组件</string>
+    <string name="open_settings">打开设置</string>
+    <string name="perm_needed">请授予“读取日历”权限以显示日程。</string>
+    <style name="Theme.NearScheduleWidget" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+    </style>
+</resources>

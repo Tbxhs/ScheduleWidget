@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.9.1" type="partial_results">
+    <map id="UnsafeImplicitIntentLaunch">
+            <map id="actionsSent">
+                    <map id="android.settings.APPLICATION_DETAILS_SETTINGS (used to start an activity)">
+                        <location id="0"
+                            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/nearschedulewidget/MainActivity.kt"
+                            line="43"
+                            column="30"
+                            startOffset="1613"
+                            endLine="43"
+                            endColumn="82"
+                            endOffset="1665"/>
+                    </map>
+            </map>
+    </map>
+    <map id="UnsafeIntentLaunch">
+            <map id="unprotected">
+                <entry
+                    name="com.example.nearschedulewidget.MainActivity"
+                    boolean="true"/>
+                <entry
+                    name="com.example.nearschedulewidget.widget.CalendarWidgetProvider"
+                    boolean="true"/>
+            </map>
+    </map>
+    <map id="UnusedResources">
+        <location id="R.string.force_update"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="6"
+            column="13"
+            startOffset="188"
+            endLine="6"
+            endColumn="32"
+            endOffset="207"/>
+        <location id="R.string.open_settings"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="5"
+            column="13"
+            startOffset="141"
+            endLine="5"
+            endColumn="33"
+            endOffset="161"/>
+        <location id="R.string.perm_needed"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="4"
+            column="13"
+            startOffset="83"
+            endLine="4"
+            endColumn="31"
+            endOffset="101"/>
+        <location id="R.xml.provider_paths"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/xml/provider_paths.xml"
+            line="2"
+            column="1"
+            startOffset="39"
+            endLine="4"
+            endColumn="9"
+            endOffset="117"/>
+        <entry
+            name="model"
+            string="attr[colorPrimary(R)],color[widget_background(U),widget_text_primary(U),widget_text_secondary(U),widget_text_tertiary(U),widget_text_special(U),widget_separator(U),widget_grid_line(U),widget_now_line(U),widget_allday_background(U),widget_allday_text(U),widget_event_background(U),widget_event_bar(U),widget_event_title(U),widget_event_time(U),widget_event_stripes(U)],drawable[ic_launcher_foreground(U)],id[tvPermissionStatus(U),tvPermissionInfo(U),btnGrant(U),btnSettings(U),btnUpdate(U),rgUpdateInterval(U),rb5min(U),rb10min(U),rb15min(U),rb30min(U),ivCanvas(U),btn_refresh(U)],layout[activity_main(U),activity_settings(U),widget_calendar(U)],mipmap[ic_launcher(U)],string[app_name(U),perm_needed(D),open_settings(D),force_update(D)],style[Theme_NearScheduleWidget(U),Widget_AppCompat_Button_Borderless(R),Theme_Material3_Light_NoActionBar(R)],xml[calendar_appwidget_info(U),provider_paths(D)];1d^20^26,1f^21,20^10,25^27^0,28^1f;;;"/>
+    </map>
+
+</incidents>

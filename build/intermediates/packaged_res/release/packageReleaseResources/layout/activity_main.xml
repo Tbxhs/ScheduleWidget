@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_marginTop="32dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Near Schedule Widget"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="一个简洁的桌面日程小部件"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:textColor="?android:attr/textColorSecondary"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvPermissionStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="需要日历权限"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvPermissionInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="应用需要获取您的日历读取权限，才能将日程显示在小部件上。"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:textColor="?android:attr/textColorSecondary"
+            android:paddingHorizontal="32dp"/>
+
+        <Button
+            android:id="@+id/btnGrant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="授予权限"
+            android:layout_marginTop="24dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSettings"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="设置更新频率"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/btnUpdate"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="手动刷新小部件"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="如何使用：长按桌面 -> 添加小部件 -> 找到 Near Schedule"
+        android:textSize="12sp"
+        android:textColor="?android:attr/textColorSecondary"/>
+
+</LinearLayout>

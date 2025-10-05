@@ -1,0 +1,7 @@
+
+<resources>
+    <string name="app_name">Near Schedule Widget</string>
+    <string name="perm_needed">请授予“读取日历”权限以显示日程。</string>
+    <string name="open_settings">打开设置</string>
+    <string name="force_update">手动刷新小组件</string>
+</resources>

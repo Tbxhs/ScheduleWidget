@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.9.1" type="incidents">
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="This folder configuration (`v26`) is unnecessary; `minSdkVersion` is 31. Merge all the resources in this folder into `mipmap-anydpi`.">
+        <fix-data file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-anydpi-v26" folderName="mipmap-anydpi" requiresApi="31"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-anydpi-v26"/>
+    </incident>
+
+    <incident
+        id="MonochromeLauncherIcon"
+        severity="warning"
+        message="The application adaptive icon is missing a monochrome tag">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-anydpi-v26/ic_launcher.xml"
+            line="2"
+            column="1"
+            startOffset="1"
+            endLine="5"
+            endColumn="17"
+            endOffset="220"/>
+    </incident>
+
+    <incident
+        id="UseKtx"
+        severity="warning"
+        message="Use the KTX extension function `String.toUri` instead?">
+        <fix-replace
+            description="Replace with the toUri extension function"
+            family="Replace with the toUri extension function"
+            robot="true"
+            independent="true"
+            oldString="Uri.parse(&quot;widget://update/$appWidgetId&quot;)"
+            replacement="&quot;widget://update/$appWidgetId&quot;.toUri()"
+            reformat="value"
+            imports="androidx.core.net.toUri"
+            priority="0">
+            <range
+                file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/nearschedulewidget/widget/CalendarWidgetUpdater.kt"
+                startOffset="3397"
+                endOffset="3438"/>
+        </fix-replace>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/nearschedulewidget/widget/CalendarWidgetUpdater.kt"
+            line="79"
+            column="20"
+            startOffset="3397"
+            endLine="79"
+            endColumn="61"
+            endOffset="3438"/>
+    </incident>
+
+    <incident
+        id="UseKtx"
+        severity="warning"
+        message="Use the KTX extension function `String.toUri` instead?">
+        <fix-replace
+            description="Replace with the toUri extension function"
+            family="Replace with the toUri extension function"
+            robot="true"
+            independent="true"
+            oldString="Uri.parse(&quot;widget://update/$appWidgetId&quot;)"
+            replacement="&quot;widget://update/$appWidgetId&quot;.toUri()"
+            reformat="value"
+            imports="androidx.core.net.toUri"
+            priority="0">
+            <range
+                file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/nearschedulewidget/widget/CalendarWidgetUpdater.kt"
+                startOffset="3397"
+                endOffset="3438"/>
+        </fix-replace>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/nearschedulewidget/widget/CalendarWidgetUpdater.kt"
+            line="79"
+            column="20"
+            startOffset="3397"
+            endLine="79"
+            endColumn="61"
+            endOffset="3438"/>
+    </incident>
+
+    <incident
+        id="UseKtx"
+        severity="warning"
+        message="Use the KTX extension function `SharedPreferences.edit` instead?">
+        <fix-composite
+            description="Replace with the edit extension function"
+            family="Replace with the edit extension function"
+            robot="true"
+            independent="true">
+            <fix-replace
+                description="Replace with edit"
+                robot="true"
+                independent="true"
+                oldString="edit"
+                replacement="edit"
+                reformat="value"
+                imports="androidx.core.content.edit"
+                priority="0">
+                <range
+                    file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/nearschedulewidget/SettingsActivity.kt"
+                    startOffset="1615"
+                    endOffset="1619"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with ) {"
+                robot="true"
+                independent="true"
+                oldString=")"
+                replacement=") {"
+                priority="0">
+                <range
+                    file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/nearschedulewidget/SettingsActivity.kt"
+                    startOffset="1620"
+                    endOffset="1621"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with }"
+                robot="true"
+                independent="true"
+                oldString=".apply()"
+                replacement="}"
+                priority="0">
+                <range
+                    file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/nearschedulewidget/SettingsActivity.kt"
+                    startOffset="1666"
+                    endOffset="1674"/>
+            </fix-replace>
+            <fix-replace
+                description="Delete &quot;.&quot;"
+                robot="true"
+                independent="true"
+                oldString="."
+                replacement=""
+                priority="0">
+                <range
+                    file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/nearschedulewidget/SettingsActivity.kt"
+                    startOffset="1621"
+                    endOffset="1622"/>
+            </fix-replace>
+        </fix-composite>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/nearschedulewidget/SettingsActivity.kt"
+            line="42"
+            column="13"
+            startOffset="1609"
+            endLine="42"
+            endColumn="25"
+            endOffset="1621"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set contentDescription"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="contentDescription"
+                value="TODO"
+                point="4"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAccessibility=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAccessibility"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="11"
+            column="6"
+            startOffset="387"
+            endLine="11"
+            endColumn="15"
+            endOffset="396"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Near Schedule Widget&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="20"
+            column="9"
+            startOffset="666"
+            endLine="20"
+            endColumn="44"
+            endOffset="701"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;一个简洁的桌面日程小部件&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="28"
+            column="9"
+            startOffset="921"
+            endLine="28"
+            endColumn="36"
+            endOffset="948"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;需要日历权限&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="44"
+            column="13"
+            startOffset="1466"
+            endLine="44"
+            endColumn="34"
+            endOffset="1487"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;应用需要获取您的日历读取权限，才能将日程显示在小部件上。&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="52"
+            column="13"
+            startOffset="1738"
+            endLine="52"
+            endColumn="56"
+            endOffset="1781"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;授予权限&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="62"
+            column="13"
+            startOffset="2139"
+            endLine="62"
+            endColumn="32"
+            endOffset="2158"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;设置更新频率&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="72"
+            column="9"
+            startOffset="2433"
+            endLine="72"
+            endColumn="30"
+            endOffset="2454"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;手动刷新小部件&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="80"
+            column="9"
+            startOffset="2703"
+            endLine="80"
+            endColumn="31"
+            endOffset="2725"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;如何使用：长按桌面 -> 添加小部件 -> 找到 Near Schedule&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="86"
+            column="9"
+            startOffset="2882"
+            endLine="86"
+            endColumn="62"
+            endOffset="2935"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;更新频率&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
+            line="11"
+            column="9"
+            startOffset="368"
+            endLine="11"
+            endColumn="28"
+            endOffset="387"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;5 分钟&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
+            line="25"
+            column="13"
+            startOffset="816"
+            endLine="25"
+            endColumn="32"
+            endOffset="835"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;10 分钟&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
+            line="31"
+            column="13"
+            startOffset="1008"
+            endLine="31"
+            endColumn="33"
+            endOffset="1028"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;15 分钟&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
+            line="37"
+            column="13"
+            startOffset="1201"
+            endLine="37"
+            endColumn="33"
+            endOffset="1221"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;30 分钟&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
+            line="43"
+            column="13"
+            startOffset="1394"
+            endLine="43"
+            endColumn="33"
+            endOffset="1414"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Refresh&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/widget_calendar.xml"
+            line="23"
+            column="9"
+            startOffset="885"
+            endLine="23"
+            endColumn="45"
+            endOffset="921"/>
+    </incident>
+
+</incidents>
